@@ -69,7 +69,8 @@
               ['component=="shared_library"', {
                 'RuntimeLibrary': '3',  # /MDd
               }, {
-                'RuntimeLibrary': '1',  # /MTd
+                #'RuntimeLibrary': '1',  # /MTd
+                'RuntimeLibrary': '3',  # /MDd
               }],
             ],
           },
@@ -100,7 +101,8 @@
               ['component=="shared_library"', {
                 'RuntimeLibrary': '2',  #/MD
               }, {
-                'RuntimeLibrary': '0',  #/MT
+                #'RuntimeLibrary': '0',  #/MT
+                 'RuntimeLibrary': '2',  #/MD
               }],
             ],
           },
