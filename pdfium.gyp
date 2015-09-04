@@ -650,68 +650,68 @@
         'fpdfsdk/src/formfiller/FFL_Utils.cpp',
       ],
     },
-    {
-      'target_name': 'pdfium_unittests',
-      'type': 'executable',
-      'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest_main',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        'pdfium',
-      ],
-      'include_dirs': [
-        '<(DEPTH)'
-      ],
-      'sources': [
-        'core/src/fxcodec/codec/fx_codec_jpx_unittest.cpp',
-        'core/src/fxcrt/fx_basic_bstring_unittest.cpp',
-        'core/src/fxcrt/fx_basic_memmgr_unittest.cpp',
-        'core/src/fxcrt/fx_basic_wstring_unittest.cpp',
-        'testing/fx_string_testhelpers.h',
-        'testing/fx_string_testhelpers.cpp',
-      ],
-    },
-    {
-      'target_name': 'pdfium_embeddertests',
-      'type': 'executable',
-      'dependencies': [
-        '<(DEPTH)/testing/gmock.gyp:gmock',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        'pdfium',
-      ],
-      'include_dirs': [
-        '<(DEPTH)',
-      ],
-      'conditions': [
-        ['pdf_use_v8==1', {
-          'defines': ['_V8_SUPPORT_'],
-          'includes': [
-            'javascript.gypi'
-          ],
-          'dependencies': [
-            '<(DEPTH)/v8/tools/gyp/v8.gyp:v8_libplatform',
-          ],
-          'include_dirs': [
-            '<(DEPTH)/v8',
-          ],
-        }],
-      ],
-      'sources': [
-        'core/src/fpdfapi/fpdf_parser/fpdf_parser_decode_embeddertest.cpp',
-        'core/src/fpdfapi/fpdf_parser/fpdf_parser_parser_embeddertest.cpp',
-        'fpdfsdk/src/fpdf_dataavail_embeddertest.cpp',
-        'fpdfsdk/src/fpdfdoc_embeddertest.cpp',
-        'fpdfsdk/src/fpdfformfill_embeddertest.cpp',
-        'fpdfsdk/src/fpdftext_embeddertest.cpp',
-        'fpdfsdk/src/fpdfview_c_api_test.c',
-        'fpdfsdk/src/fpdfview_c_api_test.h',
-        'fpdfsdk/src/fpdfview_embeddertest.cpp',
-        'testing/embedder_test.cpp',
-        'testing/embedder_test.h',
-        'testing/embedder_test_mock_delegate.h',
-        'testing/embedder_test_timer_handling_delegate.h',
-        'testing/fx_string_testhelpers.cpp',
-        'testing/fx_string_testhelpers.h',
-      ],
-    },
+    #{
+    #  'target_name': 'pdfium_unittests',
+    #  'type': 'executable',
+    #  'dependencies': [
+    #    '<(DEPTH)/testing/gtest.gyp:gtest_main',
+    #    '<(DEPTH)/testing/gtest.gyp:gtest',
+    #    'pdfium',
+    #  ],
+    #  'include_dirs': [
+    #    '<(DEPTH)'
+    #  ],
+    #  'sources': [
+    #    'core/src/fxcodec/codec/fx_codec_jpx_unittest.cpp',
+    #    'core/src/fxcrt/fx_basic_bstring_unittest.cpp',
+    #    'core/src/fxcrt/fx_basic_memmgr_unittest.cpp',
+    #    'core/src/fxcrt/fx_basic_wstring_unittest.cpp',
+    #    'testing/fx_string_testhelpers.h',
+    #    'testing/fx_string_testhelpers.cpp',
+    #  ],
+    #},
+    #{
+    #  'target_name': 'pdfium_embeddertests',
+    #  'type': 'executable',
+    #  'dependencies': [
+    #    '<(DEPTH)/testing/gmock.gyp:gmock',
+    #    '<(DEPTH)/testing/gtest.gyp:gtest',
+    #    'pdfium',
+    #  ],
+    #  'include_dirs': [
+    #    '<(DEPTH)',
+    #  ],
+    #  'conditions': [
+    #    ['pdf_use_v8==1', {
+    #      'defines': ['_V8_SUPPORT_'],
+    #      'includes': [
+    #        'javascript.gypi'
+    #      ],
+    #      'dependencies': [
+    #        '<(DEPTH)/v8/tools/gyp/v8.gyp:v8_libplatform',
+    #      ],
+    #      'include_dirs': [
+    #        '<(DEPTH)/v8',
+    #      ],
+    #    }],
+    #  ],
+    #  'sources': [
+    #    'core/src/fpdfapi/fpdf_parser/fpdf_parser_decode_embeddertest.cpp',
+    #    'core/src/fpdfapi/fpdf_parser/fpdf_parser_parser_embeddertest.cpp',
+    #    'fpdfsdk/src/fpdf_dataavail_embeddertest.cpp',
+    #    'fpdfsdk/src/fpdfdoc_embeddertest.cpp',
+    #    'fpdfsdk/src/fpdfformfill_embeddertest.cpp',
+    #    'fpdfsdk/src/fpdftext_embeddertest.cpp',
+    #    'fpdfsdk/src/fpdfview_c_api_test.c',
+    #    'fpdfsdk/src/fpdfview_c_api_test.h',
+    #    'fpdfsdk/src/fpdfview_embeddertest.cpp',
+    #    'testing/embedder_test.cpp',
+    #    'testing/embedder_test.h',
+    #    'testing/embedder_test_mock_delegate.h',
+    #    'testing/embedder_test_timer_handling_delegate.h',
+    #    'testing/fx_string_testhelpers.cpp',
+    #    'testing/fx_string_testhelpers.h',
+    #  ],
+    #},
   ],
 }
