@@ -13,7 +13,7 @@ python setup.py install
 
 :PDFIUM
 cd %BASE_DIR%
-git clone https://github.com/klokantech/pdfium pdfium
+git clone https://github.com/rouault/pdfium win_gdal_build
 
 :BUILD
 cd %BASE_DIR%\pdfium
@@ -21,12 +21,12 @@ cd %BASE_DIR%\pdfium
 python build\gyp_pdfium.py
 
 REM Building x64
-echo call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x64 > build_x64.bat
+echo call "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x64 > build_x64.bat
 echo msbuild build\all.sln /p:Configuration=Release /p:Platform=x64 >> build_x64.bat
 cmd /c build_x64.bat
 
 REM Building x86
-echo call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x86 > build_x86.bat
+echo call "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x86 > build_x86.bat
 echo msbuild build\all.sln /p:Configuration=Release /p:Platform=Win32 >> build_x86.bat
 cmd /c build_x86.bat
 
