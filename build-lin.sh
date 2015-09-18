@@ -19,8 +19,8 @@ PREFIX=$HOME/pdfium/install
 
 PROCS=4
 
-#BUILDTYPE=Release
-BUILDTYPE=Debug
+BUILDTYPE=Release
+#BUILDTYPE=Debug
 
 
 set -e
