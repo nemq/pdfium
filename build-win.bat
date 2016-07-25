@@ -1,4 +1,8 @@
 set BASE_DIR=%CD%
+REM Set python 2.7 enviroment
+call "D:\Program Files\WinPython-64bit-2.7.10.3\scripts\env.bat"
+REM Add git to PATH
+set PATH=D:\Program Files\Git\bin;%PATH%
 
 :DEPS
 cd %BASE_DIR%
